@@ -1,0 +1,134 @@
+1. What is Callback function?
+
+answer : 
+callback functionis a function where passed an argumen or parameterh to other function to complte some action
+
+
+2. What is different between Async & Sync ? (Examples of its use, not coding samples)
+
+answer : 
+
+synchronous : 
+- have blocking
+- single thread
+- only 1 operation / task can be execute at same time
+
+example : traditional function
+
+asyncronus
+- not have blocking
+- multiple thread
+- multimple task opreate at same time
+
+example : queue
+
+3. What do you think about typescript?
+
+answer : 
+TypeScript is a next level language for application-scale JavaScript. TypeScript adds optional types to JavaScript run in multi device or compiler
+
+
+
+4. Functional programming :
+Please use a programming language that you are very good.
+const numbers = [1, 4, 5, 1, 2, 10, 12, 15, 11, 13, 11, 5];
+Use chain function (map, filter, sort, reduce, etc) to log :
+  a. Sum of all odd numbers in array
+  answer : 
+
+  var numEvent = numbers.filter(function(item) {
+     return (item % 2 == 0);
+  });
+
+  console.log(numEvent)
+
+
+  b. Sum of all unique odd numbers in array
+  Tips : Each answer can be written in 2 lines! (each line less than 100 characters)
+  answer : 
+
+
+5. Sort following array low to high number without any library or built in array method:
+
+Please use a programming language that you are very good.
+[1, 3, 4, 3, 2, 3, 0, 10, 30, 30, 7]
+
+answer : 
+lst = [1, 3, 4, 3, 2, 3, 0, 10, 30, 30, 7];
+def bubble_sort(lst):
+    """
+    Bubble sort implementation
+    Naive s`orting algorithm
+
+    Each of the n items could take n-1 (all other items) comparisons in worst case,
+    n * (n-1) = n^2 - n = O(n^2) time complexity performance.
+
+    When we've performed a swap,
+    on the next pass i will point to where that element now is,
+    meaning that we continue "bubbling" that element up
+    for as long as there is an item less than it in front (they are out of order).
+
+    Otherwise, if no swap was performed, i simply moves on to look for an item that
+    needs to be swapped.
+
+    When the loop finishes without finding any item that needs to be swapped,
+    the whole list must be sorted.
+    """
+    swapping = True
+    while swapping:
+        swapping = False
+        for i in range(len(lst) - 1):
+            if lst[i] > lst[i + 1]:
+                swapping = True
+                # swap the items
+                tmp = lst[i]
+                lst[i] = lst[i + 1]
+                lst[i + 1] = tmp
+
+
+6. Define Time Complexity & Big-O Notation for each function below:
+a. 
+
+private String firstItem(String[ ] arr){
+	return arr[0];
+}
+
+Big-O Notation : O(1) — Constant Time
+Time Complexity : 1 seconds
+
+
+b. O(log n) — Logarithmic Time
+
+private boolean containDuplicate(int[ ] arr){
+	for (var outer = 0; outer < arr.length; outer++){
+		for (var inner = 0; inner < arr.length; inner++){
+			if (outer == inner) 
+			continue;
+			if (arr[outer] == arr[inner]){
+				return true;
+			} 
+				
+		}
+		return false;
+	}
+}
+
+n * (n-1) = n^2 - n = O(n^2)
+
+C. private int Fibonacci(int number){
+if (number <= 1) return number;
+return Fibonacci(number - 2) + Fibonacci(number - 1);
+}
+answer :
+T(n<=1) = O(1)
+
+T(n) = T(n-1) + T(n-2) + O(1)
+
+
+
+7. Use unit testing in your program. Choose one of the numbers
+
+Run command linke 'python test_sort.py' 
+
+the that command can test file in /examples/sort/bubble.py for task no 5
+
